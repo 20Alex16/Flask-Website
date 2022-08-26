@@ -143,6 +143,10 @@ label{
     /* padding:5px; */
 }
 
+label[for=remember]{
+    cursor:pointer;
+}
+
 .switch{
     display: flex;
     margin:10px;
