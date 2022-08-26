@@ -6,6 +6,8 @@ html {
     padding: 0;
     border: 0;
     margin: 0;
+    /* width: 100%;
+    height: 100%; */
 }
 
 body {
@@ -21,6 +23,8 @@ body {
     height: 100vh;
     gap: 10px;
 
+    background-size:auto;
+
     background: linear-gradient(var(--inclinare), rgb(27, 226, 27), rgb(94, 21, 230));
 }
 
@@ -29,6 +33,7 @@ div.wrapper {
     flex-direction: column;
     border: 0.5em;
     padding: 30px;
+    width:calc(100% - 60px - 1em);
 
     flex-grow: 1;
     justify-content: center;
@@ -83,7 +88,8 @@ p {
     flex-direction: column;
 
     padding: 10px;
-    margin: 2em;
+    margin-block: 2em;
+    margin-inline: 0;
     border-radius: 2em;
     gap: 10px;
 
@@ -94,13 +100,11 @@ p {
 }
 
 input {
-    flex-shrink: 2;
     border-radius: 50px;
     background-color: white;
-    /* border: 2px solid rgba(0, 0, 255, 0.8); */
     border:0;
     padding: 5px;
-    font-size: 25px;
+    font-size: min(5vw, 25px);
     font: bolder;
     outline: 3px solid transparent;
 
