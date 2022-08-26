@@ -147,7 +147,7 @@ label[for=remember]{
     cursor:pointer;
 }
 
-.switch{
+.checkmark{
     display: flex;
     margin:10px;
 
@@ -158,7 +158,7 @@ label[for=remember]{
     background-color: grey;
 }
 
-.switch::after{
+.checkmark::after{
     position:absolute;
     display: flex;
     align-self: center;
@@ -172,11 +172,11 @@ label[for=remember]{
     font-family: monospace;
 }
 
-input:checked + .switch{
+input:checked + .checkmark{
     background-color: green !important;
 } 
 
-input:checked + .switch::after{
+input:checked + .checkmark::after{
     position:absolute;
     display: flex;
     align-self: center;
