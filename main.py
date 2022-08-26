@@ -1,7 +1,5 @@
 from flask import Flask, render_template, send_file
 
-
-print('salut')
 app = Flask(__name__, static_folder='scripts')
 
 @app.route('/')
