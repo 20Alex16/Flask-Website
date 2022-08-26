@@ -1,6 +1,6 @@
 from flask import Flask, render_template, send_file
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='scripts')
 
 @app.route('/')
 def index():
@@ -8,11 +8,11 @@ def index():
 
 @app.route('/style.css')
 def style():
-    return send_file('static/style.css')
+    return send_file('scripts/style.css')
 
 @app.route('/colorChangingBkgr.js')
 def colorChangingBkgr():
-    return send_file('static/colorChangingBkgr.js')
+    return send_file('scripts/colorChangingBkgr.js')
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=80, debug=True)
