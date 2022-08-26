@@ -1,34 +1,34 @@
-:root{
+:root {
     --inclinare: -50deg;
 }
 
-html{
+html {
     padding: 0;
     border: 0;
     margin: 0;
 }
 
-body{
+body {
     /* width: 95vh; */
     /* height: 95vh; */
-    display:grid;
+    display: grid;
     /* display: flex; */
     /* flex-grow: 2; */
-    border:0;
+    border: 0;
     padding: 0;
-    margin:0;
+    margin: 0;
     width: 100%;
-    height:100vh;
-    gap:10px;
+    height: 100vh;
+    gap: 10px;
 
     background: linear-gradient(var(--inclinare), rgb(27, 226, 27), rgb(94, 21, 230));
 }
 
-div.wrapper{
+div.wrapper {
     display: flex;
     flex-direction: column;
     border: 0.5em;
-    padding:30px;
+    padding: 30px;
 
     flex-grow: 1;
     justify-content: center;
@@ -37,21 +37,28 @@ div.wrapper{
     border-radius: 2em;
 }
 
-.futuristic{
+.futuristic,
+.futuristic-blue {
     /* text-shadow: 0px 0px 5px black; */
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color:transparent;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: transparent;
+    font-size: 5vw;
     font-weight: bolder;
     font-style: italic;
     /* text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; */
     background-image: linear-gradient(to right, rgb(229, 199, 241), rgb(206, 241, 237), rgb(232, 250, 216));
-    
+
     -webkit-text-stroke: 2px black;
 
     -webkit-background-clip: text;
 }
 
-#grow{
+.futuristic-blue {
+    background-image: linear-gradient(-15deg, rgb(33, 29, 241), rgb(7, 137, 243)) !important;
+    -webkit-text-stroke: 0 !important;
+}
+
+#grow {
     font-size: 8vw;
     transition-property: font-size;
     transition-timing-function: ease-in-out;
@@ -59,9 +66,60 @@ div.wrapper{
     /* transition: ease-in-out 2s; */
 }
 
-p{
+p {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
+}
+
+.greeting::after {
+    content: 'Welcome!';
+}
+
+.bubble {
+    display: grid;
+    min-width: 50%;
+    flex-direction: column;
+
+    padding: 10px;
+    margin: 2em;
+    border-radius: 2em;
+    gap: 10px;
+
+    align-items: center;
+    justify-content: center;
+
+    background-color: rgb(224, 235, 245);
+}
+
+input {
+    flex-shrink: 2;
+    border-radius: 50px;
+    background-color: white;
+    /* border: 2px solid rgba(0, 0, 255, 0.8); */
+    border:0;
+    padding: 5px;
+    font-size: 25px;
+    font: bolder;
+    outline: 3px solid transparent;
+
+    transition: background-color cubic-bezier(1, 0, 0, 1) .3s;
+    transition: color cubic-bezier(1, 0, 0, 1) .2s;
+    transition: outline cubic-bezier(1, 0, 0, 1) .1s;
+}
+
+input:hover,
+input:focus:not(input[type=submit]) {
+    outline: 3px solid lightgreen;
+}
+
+input[type=submit] {
+    background-color: rgb(220, 239, 250) !important;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: lightgreen !important;
+    color: white;
 }
